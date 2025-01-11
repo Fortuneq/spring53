@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>История вычислений</title>
+</head>
+<body>
+<h1>История вычислений</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Операция</th>
+        <th>Число 1</th>
+        <th>Число 2</th>
+        <th>Результат</th>
+        <th>Дата и время</th>
+    </tr>
+    <tr th:each="calc : ${calculations}">
+        <td th:text="${calc.id}">1</td>
+        <td th:text="${calc.operation}">+</td>
+        <td th:text="${calc.operand1}">0</td>
+        <td th:text="${calc.operand2}">0</td>
+        <td th:text="${calc.result}">0</td>
+        <td th:text="${calc.timestamp}">2025-01-10T10:00</td>
+    </tr>
+</table>
+<a href="/">Назад</a>
+</body>
+</html>
